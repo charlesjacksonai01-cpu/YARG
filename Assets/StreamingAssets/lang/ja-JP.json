@@ -96,6 +96,7 @@
             "ProDrums": "プロドラム",
             "FiveLaneDrums": "５レーンドラムキット",
             "EliteDrums": "エリートドラム",
+            "AggregateDrums": "Aggregate Drums",
             "ProGuitar_17": "１７フレットプロギター",
             "ProGuitar_22": "２２フレットプロギタ",
             "ProBass_17": "１７フレットプロベースギター",
@@ -161,6 +162,7 @@
             "Repos": {
                 "Community": "コミュニティ",
                 "OpenSource": "オープンソース",
+                "YALCY": "YALCY",
                 "YARC-Charters": "公式YARGセットリスト",
                 "YARC-Launcher": "YARCランチャー",
                 "YARG": "YARG"
@@ -193,6 +195,7 @@
                 "AlbumCover": "{0}制作のアルバムカバー",
                 "ChartedBy": "{0}によって作成しました",
                 "License": "曲ライセンス: {0}",
+                "Background": "Background Visual Media By: {0}",
                 "Written": "書きました",
                 "Composed": "作曲した",
                 "Arranged": "編曲",
@@ -209,7 +212,7 @@
         },
         "Toast": {
             "AutoCalibrationScore": "スコア保存が無効：自動キャリブレーションが有効です。",
-            "NoFailScore": "スコア保存が無効：ノフェイルがフェイルメーターをリセット必要を生じました。",
+            "NoFailScore": "Score saving disabled: No fail was toggled.",
             "ResumeAfterFailInvalidate": "Score saving disabled: Resuming after failure invalidated score.",
             "ProfileCreated": "新しいデバイス：{0}のプロフィル作成したYARGするの時間だ！",
             "TooManyPauses": "スコア保存が無効：ポーズ多すぎました。",
@@ -234,11 +237,6 @@
                 "Message": "本当に<b>{0}</b>を削除しますか？\n\n{1}",
                 "Confirm": "ここに<b>{0}</b>入力して確認します"
             },
-            "EngineInconsistency": {
-                "Title": "リプレイはベータ版です",
-                "Description": "只今、リプレーシステムはベータにあるのせいで<b>違うスコアとスタットを表示するの<i>可能性</i>があるんだけど</b>、特にギターだったらです。\n\n目的は信頼的と正確があります。問題を直しています！",
-                "Confirm": "わかりました"
-            },
             "Experimental": {
                 "Title": "実験的な機能の知らせ",
                 "Description": "表示されようとしているオプションは進行中です。この機能は変更される可能性がある、バグがあるかもしれない、そして<b>重大な問題を引き起こすかもしれません<b>。",
@@ -250,6 +248,21 @@
             },
             "FriendlyBindingDialog": {
                 "Skip": "スキップ"
+            },
+            "ReplayMenu": {
+                "EngineInconsistency": {
+                    "Title": "Replays Are In Beta",
+                    "Description": "Currently, the replay system is in beta, <b>and <i>may</i> provide inconsistent scores/stats</b>, especially for guitar.\n\nThe end goal is for replays to be reliable and accurate, and we're working on fixing these problems!",
+                    "Confirm": "I Understand"
+                },
+                "ReplayLoadFail": {
+                    "Title": "Failed to Load Replay",
+                    "Description": "The replay data could not be loaded. It may be corrupted or out of date."
+                },
+                "UnavailableSong": {
+                    "Title": "Unavailable Song",
+                    "Description": "A song compatible with the selected play is not present in your library! Most likely deleted!"
+                }
             }
         },
         "DifficultySelect": {
@@ -276,15 +289,17 @@
                 "MoreThanYear": "1年以上"
             },
             "Analyze": "分析",
+            "ViewScoreCard": "View Results",
             "PlayWithReplay": "リプレイでプレイ"
         },
         "Main": {
-            "MessageOfTheDay": "<align=center><size=32><b>Welcome to the v0.15 nightlies!</b></size></align>\n\nv0.15 now has support for tremolo/trill lanes, customizable track backgrounds (including transparency), custom vocal characters for venues, advanced player performance tracking, repositionable highways, adds new in game calibration tools, and more! Oh, and the new and improved music library is finally here, including advanced song filters so even the largest library can't keep you from finding what you're looking for! :D\n\n<b>If you have any feedback or find any bugs, please let us know on Discord or GitHub.</b>\n\nHappy YARGin'!",
+            "MessageOfTheDay": "<align=center><size=32><b>Welcome to v0.15!</b></size></align>\n\nv0.15 is a major update that adds many highly requested and necessary gameplay features such as roll/trill lanes and Big \"YARG\" endings, as well as revamped user interface in the song selection and results screen, drum lane customization, automatic genre categorization, experimental custom vocalist characters in venues, and more.\n\n<b>If you have any feedback or find any bugs, please let us know on Discord or GitHub.</b>\n\nHappy YARGin'!",
             "Options": {
                 "Quickplay": "クイックプレイ",
                 "Practice": "練習",
                 "Profiles": "プロフィール",
                 "History": "履歴",
+                "Content": "Content",
                 "Settings": "設定",
                 "Credits": "クレジット",
                 "Exit": "終了"
@@ -310,14 +325,14 @@
             "Popup": {
                 "Header": {
                     "SortBy": "並び替え…",
-                    "GoTo": "へ",
-                    "SelectPlaylists": "プレイリストを選ぶ"
+                    "GoToSection": "Go To Section...",
+                    "AddToPlaylist": "Add To Playlist..."
                 },
                 "Item": {
                     "RandomSong": "ランダムな曲",
                     "BackToTop": "トップへ戻る",
                     "ScanSongs": "曲をスキャン",
-                    "SortBy": "{0}で並び替え",
+                    "SortBy": "Sort By...",
                     "GoToSection": "セクションへ",
                     "AddToFavorites": "お気に入りへ追加",
                     "RemoveFromFavorites": "お気に入りから削除",
@@ -344,6 +359,7 @@
             "ExpandHeaderHoldStartSet": "<align=left>ヘッダーを開く<br><size=67%>（ホールド）セットリストを始める</size></align>",
             "CollapseHeaderHoldStartSet": "<align=left>ヘッダーを閉じる<br><size=67%>（ホールド）セットリストを始める</size></align>",
             "Search": "検索",
+            "ExitSearchHold": "(Hold) Exit Search",
             "SkipSection": "<align=left>セクションを操作</align>",
             "MoveInPlaylist": "曲歌を移動する",
             "CurrentSetlist": "現在のセットリスト",
@@ -352,6 +368,7 @@
             "PlaylistAddedToSet": "プレイリストからセットリストまで{0:N0}曲歌を追加しました",
             "StartSet": "セットリストを始める",
             "PlayShow": "ショーを演奏する",
+            "HoldPlayShow": "(Hold) Play A Show",
             "Filters": "フィルター",
             "NoSongsInPlaylist": "プレイリストから曲歌がありません",
             "CannotAddToSelf": "いや、ウロボロスをつくてくれない。惜しいね、ジェイデン。",
@@ -485,10 +502,12 @@
         },
         "ScoreScreen": {
             "BandScoreNotSaved": "スコアは保存されていません",
+            "InconsistentReplay": "Inconsistent Replay",
             "RestartSong": "曲をリスタート",
             "ShowAdvanced": "先進を表示",
             "HideAdvanced": "先進を非表示",
-            "EndSetlistEarly": "セットリストを終了"
+            "EndSetlistEarly": "セットリストを終了",
+            "ViewReplay": "View Replay"
         },
         "Settings": {
             "ShowAdvanced": "先進を表示",
@@ -501,6 +520,21 @@
             "SongCount": "{0:N0} <alpha=#60>曲歌",
             "ScanNeeded": "<alpha=#60>スキャンが必要です",
             "DMXInfo": "DMXキューチェンジと後処理チャネル数値\n\n<b>キュー変更</b>\n\n0 - キューなし\n10 - メニュー\n20 - スコア\n30 - イントロ\n40 - バース\n50 - サビ\n60 -クール（ループ）\n70 - ウォーム(ループ）\n80 - クール（マニュアル）\n90 - ウォーム（マニュアル）\n100 - ディスコード\n110 - ストンプ\n120 - デフォルト\n130 - ハーモニー\n140 - フレンジー\n150 - シルエット\n160 - シルエット スポットライト\n170 - サーチライト\n180 - スイープ\n190 - ブラックアウト（早い）\n200 - ブラックアウト（遅い）\n210 - ブラックアウト（スポットライト）\n220 - フレア（遅い）\n230 - フレア（早い）\n240 - ビッグ・ロック・エンディング\n\nストロボとフォグのステータスは、それぞれチャネルを参照してください\n\n<b>ポストプロセッシング</b>\n\n0 - デフォルト\n\n基本的なエフェクト\n4 - ブルーム\n14 - 明るい\n24 - コントラスト\n34 - 映す\n44 - ネガティブ\n54 -\n\n色フィルターとエフェクト\n64 - 黒と白\n74 - セピア色\n84 - シルバー色\n94 - カクカク黒と白\n104 - ネガティブ赤と黒\n114 - PL黒と白\n124 - PL赤と青\n134 - 淡い赤\n144 - 淡い青\n154 - コントラストレッド\n164 - コントラストグリン\n174 - コントラストブルー\n\n粒子の荒い\n184 - 粒子の荒いフィルム\n194 - 粒子の荒い色収差\n\nスキャンライン\n204 - スキャンライン\n214 - スキャンライン黒と白\n224 - スキャンラインブルー\n234 - スキャンラインセキュリティ\n\n残像\n244 - 残像\n252 - 残像長い\n253 - 残像淡い\n254 - 残像フリッカー\n255 - 残像スペーシー\n\nもっと情報のためにYARGの文献集を見せてください: https://docs.yarg.in/en/DMX"
+        },
+        "Content": {
+            "CharacterSelect": {
+                "NoCharacters": "No characters available",
+                "NoCharactersSubtext": "Go online or download some .yargchar files",
+                "UnspecifiedAuthor": "Unspecified Author",
+                "Hide": "Hide",
+                "Unhide": "Unhide",
+                "Unset": "Unset"
+            },
+            "Options": {
+                "Character": "Characters",
+                "Back": "Main Menu"
+            },
+            "MessageOfTheDay": "Here you can set your content preferences and preview certain available custom content. For now, you can only select a custom vocal character, but in the future you will be able to select venues and possibly some other things.\n\nAs always, feedback is welcome and appreciated!"
         },
         "Filters": {
             "OptionsHeader": "設定",
@@ -574,6 +608,48 @@
             "4LaneHeader": "4レーンドラムハイウェイ設定",
             "ProHeader": "プロドラムハイウェイ設定",
             "5LaneHeader": "5レーンドラムハイウェイ設定"
+        },
+        "Pause": {
+            "Generic": {
+                "Resume": "Resume",
+                "Restart": "Restart",
+                "BackToLibrary": "Back To Library",
+                "Settings": "Settings",
+                "Practice": "Practice"
+            },
+            "Fail": {
+                "EnableNoFailandResume": "Enable No Fail and Resume",
+                "EnableNoFailandRestart": "Enable No Fail and Restart"
+            },
+            "Practice": {
+                "SetAPosition": "Set A Position",
+                "SetBPosition": "Set B Position",
+                "ClearAB": "Clear A/B",
+                "SelectNewSections": "Select New Sections",
+                "Quickplay": "Quickplay"
+            },
+            "Quickplay": {
+                "SaveReplay": "Save Replay"
+            },
+            "Replay": {
+                "SaveColorProfile": "Save Color Profile"
+            },
+            "Setlist": {
+                "Skip": "Skip"
+            },
+            "QuickSettings": {
+                "AudioSettings": "Audio Settings",
+                "EditHud": "Edit HUD",
+                "NoFail": {
+                    "Enable": "Enable No Fail",
+                    "Disable": "Disable No Fail"
+                },
+                "VenuePP": {
+                    "Enable": "Enable Venue Post Processing",
+                    "Disable": "Disable Venue Post Processing"
+                },
+                "Calibration": "Calibration Settings"
+            }
         }
     },
     "Gameplay": {
@@ -763,6 +839,9 @@
                 "WithNumber": "{0} {1}",
                 "PercentageBased": "{0}% - {1}%"
             }
+        },
+        "UnisonDisplay": {
+            "Header": "Unison Bonus"
         }
     },
     "Preview": {
@@ -798,7 +877,8 @@
             "Left": "左へ",
             "Right": "右へ",
             "Start": "スタート（ポーズ）",
-            "Select": "選ぶ"
+            "Select": "選ぶ",
+            "Search": "Search"
         },
         "FiveFret": {
             "Green": "緑のフレット（1番目）",
@@ -938,6 +1018,7 @@
             "LightingGeneral": "一般秋明",
             "ExportSongs": "エキスパート曲リスト",
             "PathsAndFolders": "パスとフォルダ",
+            "CacheManagement": "Cache Management",
             "MusicLibrary": "音楽ライブラリ",
             "PlayAShow": "ショーを演奏する",
             "ScanningOptions": "スキャン設定",
@@ -950,7 +1031,7 @@
             "Experimental": "実験的",
             "HUD": "HUD",
             "Gameplay": "ゲームプレイ",
-            "OutputConfiguration": "Output Configuration",
+            "OutputConfiguration": "出力設定",
             "Accessibility": "アクセシビリティ"
         },
         "Button": {
@@ -959,12 +1040,14 @@
             "ExportSongsJson": "Ouvert (JSON)",
             "ExportSongsText": "プレーンテキスト",
             "ExportSongsCsv": "CSV",
+            "ExportSongsWeb": "Web Page",
             "OpenCalibrator": "自動でキャリブレーション",
             "OpenVenueFolder": "背景とベニューのフォルダを開く",
             "AddFolder": "フォルダを追加",
             "RefreshCache": "曲をスキャン",
             "OpenExecutablePath": "実行ファイルパスを開く",
-            "OpenPersistentDataPath": "永続データのパスを開く"
+            "OpenPersistentDataPath": "永続データのパスを開く",
+            "RemoveRemoteContent": "Remove Cached Content"
         },
         "Setting": {
             "AllowDuplicateSongs": {
@@ -982,7 +1065,7 @@
             },
             "AccountForHardwareLatency": {
                 "Name": "ハードウェア遅延を考慮する",
-                "Description": "Automatically accounts for the detected playback latency of your audio hardware. This latency may be inaccurate, disable this setting if your audio calibration is negative."
+                "Description": "オーディオデバイスのレイテンシーを自動的に考慮します。このレイテンシーは不正確場合があるから、オーディオキャリブレーションが負の場合はこの設定を無効してください。"
             },
             "BassVolume": {
                 "Name": "ベースボリューム",
@@ -998,6 +1081,15 @@
                     "Disabled": "オフ"
                 }
             },
+            "UnisonDisplay": {
+                "Name": "Unison Display",
+                "Description": "Choose how unison bonuses should be displayed during a song.",
+                "Dropdown": {
+                    "Always": "Always",
+                    "MultiplayerOnly": "Multiplayer Only",
+                    "Disabled": "Disabled"
+                }
+            },
             "OverstrumAndOverhitSoundEffects": {
                 "Name": "オーバーストラムとオーバーヒットのSE",
                 "Description": "オーバーストラムとオーバーヒットのSEをオンにします。"
@@ -1008,7 +1100,7 @@
             },
             "BandComboTypeSetting": {
                 "Name": "バンドコンボ種類",
-                "Description": "Adjusts how Band Streak is calculated, especially in multiplayer sessions. Set this to 'Off' to hide the Band Streak counter.",
+                "Description": "特にマルチプレイヤーでバンドストリークを計算方法を変更します。バンドストリークカウンターを非表示するには、この設定を「オフ」に変更してください。",
                 "Dropdown": {
                     "Off": "オフ",
                     "Lenient": "緩い",
@@ -1114,6 +1206,10 @@
                 "Name": "フレームレートの制限",
                 "Description": "フレームレートの制限です。 <color=white>1000FPSでプレイするのは必要じゃないです。</color> VSyncをお勧めします。"
             },
+            "BackgroundFpsCap": {
+                "Name": "Background FPS Cap",
+                "Description": "Caps the framerate while YARG is unfocused (tabbed out) to lower CPU/GPU usage, then restores it when focus returns. Set to 0 to disable."
+            },
             "FpsStats": {
                 "Name": "フレームレートを表示",
                 "Description": "ステータスバーでフレームレートを表示。"
@@ -1145,6 +1241,10 @@
                 "Name": "スコアボックスでグラフィカル進みを表示",
                 "Description": "Enables and disables the graphical blue outline on the score box that displays the song's progress."
             },
+            "GraphicalSongProgressTint": {
+                "Name": "Graphical Progress Tint",
+                "Description": "Adjust the tint on the song progress, if enabled."
+            },
             "GuitarVolume": {
                 "Name": "ギターの音量",
                 "PauseName": "ギター",
@@ -1169,8 +1269,10 @@
                 "Dropdown": {
                     "HighestPercentageOverall": "Best percentage across all difficulties",
                     "HighestPercentageDifficulty": "Best percentage on highest-played difficulty",
+                    "HighestPercentageCurrentDifficulty": "Best percentage on current difficulty",
                     "HighestScoreOverall": "Highest score across all difficulties",
-                    "HighestScoreDifficulty": "Highest score on highest-played difficulty"
+                    "HighestScoreDifficulty": "Highest score on highest-played difficulty",
+                    "HighestScoreCurrentDifficulty": "Highest score on current difficulty"
                 }
             },
             "HighwayTiltMultiplier": {
@@ -1327,6 +1429,10 @@
                 "Name": "出力デバイス",
                 "Description": "The interface to use when playing sounds."
             },
+            "EnablePlayAShow": {
+                "Name": "Enable Play A Show",
+                "Description": "Enable or disable play a show feature from the library"
+            },
             "PlayAShowTimeout": {
                 "Name": "Show Selection Timeout",
                 "Description": "The amount of time to wait for votes before picking a song or refreshing the categories."
@@ -1438,6 +1544,10 @@
                     "Enabled": "オン"
                 }
             },
+            "UseVenueSfx": {
+                "Name": "Use Venue SFX",
+                "Description": "If enabled, venues will be allowed to play custom sound effects."
+            },
             "UseWhammyFx": {
                 "Name": "ワーミーSEを使います",
                 "Description": "If enabled, it will add pitch bending to guitar stems when the player presses the whammy bar.\nWARNING: This setting is known to cause audio desync issues on some machines."
@@ -1479,6 +1589,10 @@
                     "Performance": "パフォーマンス",
                     "UltraPerformance": "ウルトラパフォーマンス"
                 }
+            },
+            "VenueSfxVolume": {
+                "Name": "Venue SFX Volume",
+                "Description": "Adjusts the volume of custom venue sound effects."
             },
             "VideoCalibration": {
                 "Name": "ビデオキャリブレーション（ミリ秒）",
@@ -1528,15 +1642,19 @@
             },
             "PauseOnFocusLoss": {
                 "Name": "Pause On Focus Loss",
-                "Description": "Pauses the game if it tabbed out/loses focus in the middle of a song."
+                "Description": "Pauses the game if it's tabbed out/loses focus in the middle of a song."
             },
             "MuteOnFocusLoss": {
                 "Name": "Mute On Focus Loss",
-                "Description": "Mutes all game audio when the game is tabbed out/loses focus, including menu music. Audio is restored when focus returns."
+                "Description": "Mutes all game audio if the game is tabbed out/loses focus, including menu music. Audio is restored when focus returns."
             },
             "ApplyVolumesInMusicLibrary": {
                 "Name": "Apply Volume Settings to Music Library Previews",
-                "Description": "Volume settings for specific instrumments will be applied in the Music Library as well."
+                "Description": "Volume settings for specific instruments will be applied in the Music Library as well."
+            },
+            "ApplyVolumesInMusicPlayer": {
+                "Name": "Apply Volume Settings to Music Player",
+                "Description": "Volume settings for specific instruments will be applied to the menu music as well. Takes effect on the next song."
             },
             "DataStreamEnable": {
                 "Name": "UDPデータストリームをオンにする",
@@ -1622,6 +1740,10 @@
                 "Name": "DMX Broadcast Universe",
                 "Description": "This is the universe that YARG will send the sACN packet to. Default is \"1\". Maximum is \"65535\"."
             },
+            "DMXLocalIP": {
+                "Name": "sACN Local IP",
+                "Description": "The local IPv4 address used to send sACN packets. Leave blank to automatically select the first available Ethernet or Wi-Fi address."
+            },
             "ReconnectProfiles": {
                 "Name": "プロフィルを再接続",
                 "Description": "起動に、以前接続したプロフィルを再接続します。"
@@ -1641,6 +1763,10 @@
             "WaitForSongVideo": {
                 "Name": "Wait For Song Videos When Seeking",
                 "Description": "Waits for a song-specific video background to finish seeking when restarting/changing sections in practice or seeking a replay."
+            },
+            "AllowRemoteContent": {
+                "Name": "Allow Remote Content",
+                "Description": "Allows YARG to download and use content from remote sources. (Does not affect OpenSource and Genrelizer, requires restart to take effect)"
             },
             "WrapAroundNavigation": {
                 "Name": "Wrap-Around Navigation",

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using YARG.Audio.BASS;
+using YARG.Audio.Unity;
 using YARG.Core.Logging;
 using YARG.Core.Audio;
 using YARG.Helpers;
@@ -85,7 +85,7 @@ namespace YARG
             int savedCount = PlayerContainer.SaveProfiles(false);
             YargLogger.LogFormatInfo("Saved {0} profiles", savedCount);
 
-            GlobalAudioHandler.Initialize<BassAudioManager>();
+            GlobalAudioHandler.Initialize<UnityAudioManager>();
 
             Players = new List<YargPlayer>();
 

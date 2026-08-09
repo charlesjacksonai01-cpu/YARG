@@ -16,6 +16,18 @@ jobs:
         with:
           submodules: recursive
           lfs: true
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Restore YARG.Core dependencies
+        run: |
+          cd YARG.Core
+          dotnet restore
+          dotnet build --configuration Release
 
       - name: Cache Library
         uses: actions/cache@v4
